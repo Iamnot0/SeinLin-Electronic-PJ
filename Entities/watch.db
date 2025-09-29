@@ -1,0 +1,52 @@
+{
+  "name": "Watch",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the watch"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Watch brand"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of the watch image"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "leather",
+        "metal",
+        "sport",
+        "luxury",
+        "unisex"
+      ],
+      "description": "Watch category"
+    },
+    "description": {
+      "type": "string",
+      "description": "Watch description"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this watch is featured"
+    },
+    "is_popular": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this watch is in popular items"
+    }
+  },
+  "required": [
+    "name",
+    "brand",
+    "price"
+  ]
+}

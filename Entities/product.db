@@ -1,0 +1,60 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the product"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Product brand"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of the product image"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "refrigerator",
+        "air_conditioner",
+        "stand_fan",
+        "cooker"
+      ],
+      "description": "Product category"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "specifications": {
+      "type": "object",
+      "description": "Technical specifications"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this product is featured"
+    },
+    "is_popular": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this product is in popular items"
+    },
+    "warranty_years": {
+      "type": "number",
+      "description": "Warranty period in years"
+    }
+  },
+  "required": [
+    "name",
+    "brand",
+    "price",
+    "category"
+  ]
+}
